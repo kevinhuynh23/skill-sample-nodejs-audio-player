@@ -3,21 +3,21 @@
 import { Request, IntentRequest, LaunchRequest } from 'ask-sdk-model';
 let en = {
     card: {
-        title: 'My Radio',
-        text: 'Less bla bla bla, more la la la',
+        title: 'Work Neighborhood',
+        text: 'Less distractions, more productivity',
         image: {
             largeImageUrl: 'https://alexademo.ninja/skills/logo-512.png',
             smallImageUrl: 'https://alexademo.ninja/skills/logo-108.png'
         }
     },
-    url: 'https://audio1.maxi80.com',
-    startJingle: 'https://s3-eu-west-1.amazonaws.com/alexa.maxi80.com/assets/jingle.m4a'
+    url: 'https://www.jovo.tech/audio/Judzv0B6-launch-countdown.mp3',
+    startJingle: ''
 };
 
 let fr = {
     card: {
-        title: 'My Radio',
-        text: 'Moins de bla bla bla, plus de la la la',
+        title: 'Work Neighborhood',
+        text: 'Moins de distractions, plus de productivity',
         image: {
             image: {
                 largeImageUrl: 'https://alexademo.ninja/skills/logo-512.png',
@@ -26,8 +26,8 @@ let fr = {
     
         }
     },
-    url: 'https://audio1.maxi80.com',
-    startJingle: 'https://s3-eu-west-1.amazonaws.com/alexa.maxi80.com/assets/jingle.m4a'
+    url: 'https://project-neighbor.s3.amazonaws.com/audio_track/Launch_Countdown.mp3',
+    startJingle: ''
 };
 
 let it = {
@@ -42,8 +42,8 @@ let it = {
     
         }
     },
-    url: 'https://audio1.maxi80.com',
-    startJingle: 'https://s3-eu-west-1.amazonaws.com/alexa.maxi80.com/assets/jingle.m4a'
+    url: 'https://project-neighbor.s3.amazonaws.com/audio_track/Launch_Countdown.mp3',
+    startJingle: ''
 };
 
 let es = {
@@ -58,8 +58,8 @@ let es = {
     
         }
     },
-    url: 'https://audio1.maxi80.com',
-    startJingle: 'https://s3-eu-west-1.amazonaws.com/alexa.maxi80.com/assets/jingle.m4a'
+    url: 'https://project-neighbor.s3.amazonaws.com/audio_track/Launch_Countdown.mp3',
+    startJingle: ''
 };
 
 let globalAudioData = {

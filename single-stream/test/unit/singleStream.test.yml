@@ -24,9 +24,9 @@ configuration:
 ---
 - test: Launch request, no further interaction.
 - LaunchRequest:
-  - response.outputSpeech.ssml: Welcome to My Radio
-  - response.card.title: My Radio
-  - response.card.text: Less bla bla bla, more la la la
+  - response.outputSpeech.ssml: Welcome to Work Neighborhood
+  - response.card.title: Work Neighborhood
+  - response.card.text: Less distractions, more productivity
   - response.card.image.largeImageUrl: https://alexademo.ninja/skills/logo-512.png
   - response.shouldEndSession: true
   - response.directives[0].type: AudioPlayer.Play
@@ -37,7 +37,7 @@ configuration:
 ---
 - test: Launch request, now a returning user
 - LaunchRequest:
-  - response.directives[0].audioItem.stream.url: https://audio1.maxi80.com
+  - response.directives[0].audioItem.stream.url: https://project-neighbor.s3.amazonaws.com/audio_track/Launch_Countdown.mp3
 - AMAZON.StopIntent
 
 ---
@@ -56,14 +56,14 @@ configuration:
 ---
 - test: Resume and pause music.
 - AMAZON.ResumeIntent:
-  - response.outputSpeech.ssml: Resuming My Radio
-  - response.directives[0].audioItem.stream.url: https://audio1.maxi80.com
+  - response.outputSpeech.ssml: Resuming Work Neighborhood
+  - response.directives[0].audioItem.stream.url: https://project-neighbor.s3.amazonaws.com/audio_track/Launch_Countdown.mp3
 - AMAZON.PauseIntent: Goodbye
 
 ---
 - test: Help intent.
 - AMAZON.ResumeIntent
-- AMAZON.HelpIntent: Welcome to My Radio. You can play, stop, resume listening.  How can I help you ?
+- AMAZON.HelpIntent: Welcome to Work Neighborhood. You can play, stop, resume listening.  How can I help you ?
 - AMAZON.StopIntent
 
 ---
@@ -84,12 +84,12 @@ configuration:
   - response.shouldEndSession: true
   - response.directives[0].type: AudioPlayer.Play
   - response.directives[0].playBehavior: REPLACE_ENQUEUED
-  - response.directives[0].audioItem.stream.url: https://audio1.maxi80.com
-  - response.directives[0].audioItem.metadata.title: My Radio
-  - response.directives[0].audioItem.metadata.subtitle: Less bla bla bla, more la la la
-  - response.directives[0].audioItem.metadata.art.contentDescription: My Radio
+  - response.directives[0].audioItem.stream.url: https://project-neighbor.s3.amazonaws.com/audio_track/Launch_Countdown.mp3
+  - response.directives[0].audioItem.metadata.title: Work Neighborhood
+  - response.directives[0].audioItem.metadata.subtitle: Less distractions, more productivity
+  - response.directives[0].audioItem.metadata.art.contentDescription: Work Neighborhood
   - response.directives[0].audioItem.metadata.art.sources[0].url: https://alexademo.ninja/skills/logo-512.png
-  - response.directives[0].audioItem.metadata.backgroundImage.contentDescription: My Radio
+  - response.directives[0].audioItem.metadata.backgroundImage.contentDescription: Work Neighborhood
   - response.directives[0].audioItem.metadata.backgroundImage.sources[0].url: https://alexademo.ninja/skills/logo-512.png
 
 ---
